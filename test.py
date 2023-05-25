@@ -8,7 +8,10 @@ import base64
 
 
 
-
+if st._is_running_with_streamlit:
+    if st._is_running_with_streamlit._is_running_with_streamlit:
+        if st._is_running_with_streamlit._get_coordinates()._is_mobile:
+            st.warning("For a better experience, please switch to landscape mode.")
 
 
 def get_img_as_base64(image_path):
