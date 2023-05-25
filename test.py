@@ -3,7 +3,6 @@ import pickle
 import pandas as pd
 import numpy as np
 import os
-from streamlit_option_menu import option_menu
 from PIL import Image
 import base64
 
@@ -50,13 +49,8 @@ similarity = pickle.load(open("similarity.pkl", "rb"))
 
 # Sidebar menu
 with st.sidebar:
-    st.markdown('<p class="css-1rhbuit-sidebarWrapper">', unsafe_allow_html=True)
-    selected = option_menu(
-        menu_title="",
-        options=["Home", "Recommendation", "Book List", "About Us", "Contact"],
-        icons=['house', 'tags','filter', 'people', 'envelope']
-    )
-    st.markdown('</p>', unsafe_allow_html=True)
+    # Add menu options
+    selected = st.selectbox("Menu", ["Home", "Recommendation", "Book List", "About Us", "Contact"])
 
 
 
